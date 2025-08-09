@@ -1,0 +1,166 @@
+:host {
+  --ap-popup-max-width: 540px;
+
+  max-width: var(--ap-popup-max-width);
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  justify-content: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  // @media (max-width: $tabletMax) {
+  //   margin-inline: 16px;
+  //   width: auto;
+  //   max-width: initial;
+  // }
+}
+
+.ap-popup {
+  width: auto;
+  max-width: fit-content;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 4px 12px 0px #04040414;
+    width: fit-content;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    // @include set-font(16px, 30px, 400);
+
+    &-warning {
+      background: #fff3d1;
+      box-shadow: 0px 4px 12px 0px #8f701614;
+    }
+
+    &-error {
+      background: #fff3d1;
+      box-shadow: 0px 4px 12px 0px #8f701614;
+    }
+
+    &-success {
+      background: #e9f1df;
+      box-shadow: 0px 4px 12px 0px #4a862e14;
+    }
+
+    &-light {
+      background: black;
+      box-shadow: 0px 8px 28px 0px #00000014;
+    }
+  }
+
+  // @media (max-width: $tablet-wide) {
+  //   &__content {
+  //     color: black;
+  //     background: white;
+  //     box-shadow: 0px 4px 12px 0px #04040414;
+
+  //     @include set-font(14px, 18px, 500);
+
+  //     &-light {
+  //       background: map-get($colors, system-SS2-new);
+  //       box-shadow: 0px 8px 28px 0px #00000014;
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: $phone-wide) {
+  //   width: 100%;
+  //   max-width: initial;
+
+  //   &__content {
+  //     width: 100%;
+  //   }
+  // }
+}
+
+.slide {
+  animation: slideInFromRight var(--animationDuration) forwards ease-in;
+}
+
+.slide-out {
+  animation: slideOutToRight var(--animationDuration) forwards ease-out;
+}
+
+.cubic {
+  animation: slideInFromTop var(--animationDuration) forwards var(--cubicFunctionIn);
+}
+
+.cubic-out {
+  animation: slideOutToTop var(--animationDuration) forwards var(--cubicFunctionOut);
+}
+
+.fade {
+  animation: fadeIn var(--animationDuration) forwards linear;
+}
+
+.fade-out {
+  animation: fadeOut var(--animationDuration) forwards linear;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(calc(-200% - var(--distanceToPageTop)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutToTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-200% - var(--distanceToPageTop)));
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(calc(110%));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(110%));
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

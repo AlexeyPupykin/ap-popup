@@ -1,0 +1,29 @@
+<div
+  class="ap-popup"
+  [ngClass]="[animation, hideAnimation ? hideAnimation : '', customClass ? customClass : '']"
+  [style]="
+    '--animationDuration:' +
+    animationDuration +
+    'ms;' +
+    '--cubicFunctionIn:' +
+    cubicBezierFunctionIn +
+    ';' +
+    '--cubicFunctionOut:' +
+    cubicBezierFunctionOut +
+    ';' +
+    '--distanceToPageTop:' +
+    distanceToPageTop +
+    'px;'
+  "
+  (mouseup)="onMouseUp()"
+>
+  <div *ngIf="text || template" class="ap-popup__content" [ngClass]="'ap-popup__content-' + theme">
+    <ng-container
+      *ngIf="template"
+      [ngTemplateOutlet]="template"
+      [ngTemplateOutletContext]="templateContext"
+    ></ng-container>
+
+    <span *ngIf="text && !template" [innerHtml]="text"></span>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "ap-popup",
+  "version": "1.0.0",
+  "description": "Flexible Angular popup/notification library",
+  "keywords": [
+    "angular",
+    "popup",
+    "notification"
+  ],
+  "author": "AlexeyPupykin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexeyPupykin/ap-popup.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "module": "fesm2022/ap-popup.mjs",
+  "es2022": "fesm2022/ap-popup.mjs",
+  "fesm2022": "fesm2022/ap-popup.mjs",
+  "typings": "index.d.ts"
+}
