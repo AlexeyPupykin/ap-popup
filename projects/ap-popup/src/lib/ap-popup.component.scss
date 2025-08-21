@@ -14,12 +14,6 @@
   user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
-
-  // @media (max-width: $tabletMax) {
-  //   margin-inline: 16px;
-  //   width: auto;
-  //   max-width: initial;
-  // }
 }
 
 .ap-popup {
@@ -39,7 +33,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    // @include set-font(16px, 30px, 400);
 
     &-warning {
       background: #fff3d1;
@@ -61,30 +54,6 @@
       box-shadow: 0px 8px 28px 0px #00000014;
     }
   }
-
-  // @media (max-width: $tablet-wide) {
-  //   &__content {
-  //     color: black;
-  //     background: white;
-  //     box-shadow: 0px 4px 12px 0px #04040414;
-
-  //     @include set-font(14px, 18px, 500);
-
-  //     &-light {
-  //       background: map-get($colors, system-SS2-new);
-  //       box-shadow: 0px 8px 28px 0px #00000014;
-  //     }
-  //   }
-  // }
-
-  // @media (max-width: $phone-wide) {
-  //   width: 100%;
-  //   max-width: initial;
-
-  //   &__content {
-  //     width: 100%;
-  //   }
-  // }
 }
 
 .slide {
