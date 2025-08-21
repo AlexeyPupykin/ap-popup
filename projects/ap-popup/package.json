@@ -1,6 +1,6 @@
 {
   "name": "ap-popup",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Flexible Angular popup/notification library",
   "keywords": [
     "angular",

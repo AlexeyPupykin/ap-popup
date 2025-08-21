@@ -19,8 +19,6 @@ import { NgClass, NgIf, NgTemplateOutlet } from '@angular/common';
 })
 export class ApPopupComponent {
   @Input() public text?: string;
-  @Input() public svgIcon?: string;
-
   @Input() public template?: TemplateRef<any>;
   @Input() public templateContext: object = {};
 

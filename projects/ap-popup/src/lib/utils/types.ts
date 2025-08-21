@@ -11,7 +11,6 @@ export type PopupThemeType =
 
 export interface IPopupOpenData {
   text?: string;
-  svgIcon?: string;
   template?: TemplateRef<any>;
   templateContext?: object;
   theme?: PopupThemeType;

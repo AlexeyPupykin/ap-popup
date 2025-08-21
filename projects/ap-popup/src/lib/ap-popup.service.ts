@@ -63,7 +63,6 @@ export class ApPopupService {
     const componentRef = componentFactory.create(this._injector);
 
     componentRef.instance.text = data.text;
-    componentRef.instance.svgIcon = data.svgIcon;
     componentRef.instance.template = data.template;
     componentRef.instance.customClass = data.customClass;
     componentRef.instance.customWrapperClass = data.customWrapperClass;
